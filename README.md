@@ -223,6 +223,5 @@ For simple A/B testing, we'll implement a basic approach:
 
 This cross-platform chat agent architecture balances technical innovation with practical deployment considerations. By prioritizing a robust identity and memory system, we ensure seamless user experiences across platforms while maintaining a consistent personality. The modular design allows for incremental improvement and scaling as user needs evolve.
 
-
-
-
+## Link for Video Presentation:
+Here is the link for presentation: [HERE](https://drive.google.com/file/d/1vMACdylKN6N5V8cvedwgpl0BZzinAsCm/view?usp=sharing)
