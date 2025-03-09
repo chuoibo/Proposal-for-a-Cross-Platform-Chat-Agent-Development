@@ -19,7 +19,37 @@ This document outlines the architecture, implementation strategy, and developmen
 
 The system follows a modular, microservices-based architecture with the following core components:
 
-![Architecture Diagram](https://placeholder-for-architecture-diagram.png)
+```
++------------------+      +------------------+
+|                  |      |                  |
+|  X (Twitter)     |      |    Telegram      |
+|  Platform        |      |    Platform      |
+|                  |      |                  |
++--------+---------+      +---------+--------+
+         |                          |
+         v                          v
++--------+--------------------------+--------+
+|                                            |
+|        Platform Adapter Layer              |
+|                                            |
++--------+--------------------------+--------+
+         |                          |
+         v                          v
++--------+--------------------------+--------+
+|                                            |
+|          Unified Chat Core                 |
+|                                            |
++---+----------------+----------------+------+
+    |                |                |
+    v                v                v
++---+----+    +-----+------+    +----+-----+
+|        |    |            |    |          |
+| User   |    | Memory &   |    | Knowledge|
+|Identity|    | Context    |    | Base     |
+|Service |    | Store      |    |          |
+|        |    |            |    |          |
++--------+    +------------+    +----------+
+```
 
 1. **Platform Adapters**: Dedicated modules for X and Telegram that handle platform-specific APIs and message formats.
 2. **Unified Chat Core**: Central service managing all conversation logic, independent of platforms.
